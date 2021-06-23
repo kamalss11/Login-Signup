@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="login/signup">
+    <link rel="stylesheet" type="text/css" href="login.css">
+    <title>SignIn</title>
+</head>
+<body>
+    <section>
+        <div class="container">
+            <div class="user signinbx">
+                <div class="imgbx"><img src="login.jpg"></div>
+                
+                <div class="formbx">
+                    <form method="POST">
+                        <h2>sign in</h2>
+                        <input type="text" placeholder="Username">
+                        <input type="password" placeholder="Password">
+                        <input type="submit" value="Login">
+                        <p class="signup">Don't have an account ? <a href="#" onclick="toggleform()">SignUp</a> </p>
+                    </form>
+                </div>
+            </div>
+
+            <div class="user signupbx">
+                <div class="formbx">
+                    <form method="POST">
+                        <h2>sign up</h2>
+                        <input type="text" placeholder="Username">
+                        <input type="email" placeholder="Email">
+                        <input type="password" placeholder="Password">
+                        <input type="password" placeholder="Confirm Password">
+                        <input type="submit" value="Sign Up">
+                        <p class="signup">Already have an account ? <a href="#" onclick="toggleform()">SignIn</a> </p>
+                    </form>
+                </div>
+                
+                <div class="imgbx"><img src="login.jpg"></div>
+            </div>
+        </div>
+    </section>  
+    <script src="login.js"></script>
+</body>
+</html>

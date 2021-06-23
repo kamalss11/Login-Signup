@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Open Sans', sans-serif;
+}
+
+:root{
+   --white: #fff;
+   --input: #f5f5f5;
+   --main: linear-gradient(90deg,#0c2646 0,#204065 60%,#2a5788);
+}
+
+section{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   min-height: 100vh;
+   background: #494949;
+   padding: 20px;
+   transition: .5s;
+}
+
+section.active{
+   background: var(--main);
+}
+
+section .container{
+   position: relative;
+   width: 800px;
+   height: 500px;
+   background: var(--white);
+   box-shadow: 0 0 20px rgba(0,0,0,.3);
+   overflow: hidden;
+}
+
+section .container .user{
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   display: flex;
+}
+
+section .container .user .imgbx,section .container .user .formbx{
+   flex-basis:50%;
+   height: 500px;
+}
+
+section .container .user .imgbx{
+   position: relative;
+   transition: .5s;
+}
+
+section .container .user .imgbx img{
+   width: 400px;
+   height: 500px;
+}
+
+section .container .user .formbx{
+   position: relative;   
+   background: var(--white);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding: 20px;
+   transition: .5s;
+}
+
+section .container .user .formbx form{
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+   position: relative;
+}
+
+section .container .user .formbx form h2{
+   margin-bottom: 20px;
+   text-transform: uppercase;
+   text-align: center;
+}
+
+section .container .user .formbx form input{
+   padding: 10px;
+   background: var(--input);
+   border: none;
+   outline: none;
+   margin-bottom: 15px;
+   font-size: 15px;
+   letter-spacing: 1px;
+   border-radius: 3px;
+}
+
+section .container .user .formbx form input[type="submit"]{
+   max-width: 100px;
+   background: var(--main);
+   cursor: pointer;
+   color: var(--white);
+   transition: .5s;
+}
+
+section .container .user .formbx form .signup{
+   letter-spacing: 1px;
+   color: grey;
+}
+
+section .container .user .formbx form .signup a{
+   text-decoration: none;
+   text-transform: uppercase;
+   color: #0c2646;
+}
+
+section .container .signupbx{
+   pointer-events: none;
+}
+
+section .container.active .signupbx{
+   pointer-events: all;
+}
+
+section .container .signupbx .formbx{
+   top: 100%;
+}
+
+section .container.active .signupbx .formbx{
+   top: 0;
+ }
+
+section .container .signupbx .imgbx{
+   top: -100%;
+}
+
+section .container.active .signupbx .imgbx{
+   top: 0;
+}
+
+section .container .signinbx .formbx{
+   top: 0;
+}
+ 
+section .container.active .signinbx .formbx{
+   top: 100%;
+}
+ 
+section .container .signinbx .imgbx{
+   top: 0;
+}
+ 
+section .container.active .signinbx .imgbx{
+   top: -100%;
+}
+
+@media(max-width: 800px){
+   section .container{
+      max-width: 400px;
+   }
+
+   section .container .signupbx .formbx{
+      top: 0;
+      left: -100%;
+   }
+     
+   section .container.active .signupbx .formbx{
+      left: 0;
+   }
+
+   section .container .signinbx .formbx{
+      left: 0;
+   }
+     
+   section .container.active .signinbx .formbx{
+      left: 100%;
+      top: 0;
+   }
+
+   section .container .user{
+      flex-wrap: wrap;
+   }
+
+   section .container .user .formbx{
+      flex-basis: 100%;
+   }
+
+   section .container .user .imgbx{
+      display: none;
+   }
+}
